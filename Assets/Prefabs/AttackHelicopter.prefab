@@ -736,3 +736,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 10
+  MinXLocation: -9
+  MaxXLocation: 9
+  MinYLocation: -5
+  MaxYLocation: 6
+  PositionPitchFactor: 2.5
+  ControlPitchFactor: -10
+  PositionYawFactor: 2
+  ControlRollFactor: -15
