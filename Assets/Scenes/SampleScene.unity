@@ -663,6 +663,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &799708472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 917773729414684241, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+  m_PrefabInstance: {fileID: 1843475515909508095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &874243677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1519,11 @@ Transform:
   m_Father: {fileID: 1368961208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2009219204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6827433148821232645, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+  m_PrefabInstance: {fileID: 1843475515909508095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1843475515909508095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1569,5 +1579,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGuns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGuns.Array.data[0]
+      value: 
+      objectReference: {fileID: 2009219204}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGuns.Array.data[1]
+      value: 
+      objectReference: {fileID: 799708472}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGunsList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGunsList.Array.data[0]
+      value: 
+      objectReference: {fileID: 2009219204}
+    - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
+      propertyPath: MachineGunsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 799708472}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}

@@ -13,6 +13,8 @@ public class PlayerControls : MonoBehaviour {
 	[SerializeField] float PositionYawFactor = 2f;
 	[SerializeField] float ControlRollFactor = -15f;
 
+	[SerializeField] List<GameObject> MachineGuns;
+
 	float XThrow = 0f;
 	float YThrow = 0f;
 
@@ -25,6 +27,7 @@ public class PlayerControls : MonoBehaviour {
 	void Update() {
 		ProcessPlayerTranslation();
 		ProcessPlayerRotation();
+		ProcessFiring();
 	}
 
 	private void ProcessPlayerTranslation() {
@@ -63,5 +66,20 @@ public class PlayerControls : MonoBehaviour {
 
 	private float GetRoll() {
 		return XThrow * ControlRollFactor;
+	}
+
+	private void ProcessFiring() {
+		if (Input.GetButton("Fire1")) {
+			SetMachineGunsActive(true);
+		} else {
+			SetMachineGunsActive(false);
+		}
+	}
+
+	private void SetMachineGunsActive(bool machineGunActive) {
+		foreach (var machineGun in MachineGuns) {
+			var emissionModule = machineGun.GetComponent<ParticleSystem>().emission;
+			emissionModule.enabled = machineGunActive;
+		}
 	}
 }
