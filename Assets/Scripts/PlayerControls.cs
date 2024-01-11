@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour {
-	[SerializeField] float PlayerSpeed = 10f;
+	[Header("General Setup Settings")]
+	[Tooltip("How fast ship moves based upon player input")] [SerializeField] float PlayerSpeed = 10f;
 	[SerializeField] float MinXLocation = -9f;
 	[SerializeField] float MaxXLocation = 9f;
-	[SerializeField] float MinYLocation = -5f;
-	[SerializeField] float MaxYLocation = 6f;
-	[SerializeField] float PositionPitchFactor = 2.5f;
+	[SerializeField] float MinYLocation = -2f;
+	[SerializeField] float MaxYLocation = 11.5f;
+
+	[Header("Screen Position Based Tuning")]
+	// TODO: Consider updating so PositionPitchFactor is different based on where ship is on screen
+	[SerializeField] float PositionPitchFactor = -2f;
+	[SerializeField] float PositionYawFactor = 3f;
+
+	[Header("Player Input Based Tuning")]
 	[SerializeField] float ControlPitchFactor = -10f;
-	[SerializeField] float PositionYawFactor = 2f;
 	[SerializeField] float ControlRollFactor = -15f;
 
-	[SerializeField] List<GameObject> MachineGuns;
+	[Header("Machine Gun Array")]
+	[Tooltip("Add All Machine Gun Objects To Fire")]
+	[SerializeField] List<GameObject> MachineGuns = new List<GameObject>(2);
 
 	float XThrow = 0f;
 	float YThrow = 0f;

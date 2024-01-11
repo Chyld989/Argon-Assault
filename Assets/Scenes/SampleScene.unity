@@ -1586,11 +1586,11 @@ PrefabInstance:
     - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
       propertyPath: MachineGuns.Array.data[0]
       value: 
-      objectReference: {fileID: 2009219204}
+      objectReference: {fileID: 799708472}
     - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
       propertyPath: MachineGuns.Array.data[1]
       value: 
-      objectReference: {fileID: 799708472}
+      objectReference: {fileID: 2009219204}
     - target: {fileID: 2040661764700137990, guid: ddd4bb6fb62fd1f45bec22db33176c6e, type: 3}
       propertyPath: MachineGunsList.Array.size
       value: 2
