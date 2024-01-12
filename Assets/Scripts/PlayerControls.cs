@@ -26,16 +26,21 @@ public class PlayerControls : MonoBehaviour {
 	float XThrow = 0f;
 	float YThrow = 0f;
 
-	// Start is called before the first frame update
-	void Start() {
-
-	}
+	bool PlayerHasControl = false;
 
 	// Update is called once per frame
 	void Update() {
-		ProcessPlayerTranslation();
-		ProcessPlayerRotation();
-		ProcessFiring();
+		if (PlayerHasControl) {
+			ProcessPlayerTranslation();
+			ProcessPlayerRotation();
+			ProcessFiring();
+		} else {
+			SetMachineGunsActive(false);
+		}
+	}
+
+	public void AdjustPlayerControl(bool playerControl) {
+		PlayerHasControl = playerControl;
 	}
 
 	private void ProcessPlayerTranslation() {

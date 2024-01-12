@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7459046403012069623, guid: d948b9f1f8138404896874e388dbf463, type: 3}
+      propertyPath: SceneResetTimerInSeconds
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8463212001837290456, guid: d948b9f1f8138404896874e388dbf463, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -255,6 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8162021228626497090, guid: d948b9f1f8138404896874e388dbf463, type: 3}
+    - {fileID: 7459046403012069623, guid: d948b9f1f8138404896874e388dbf463, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d948b9f1f8138404896874e388dbf463, type: 3}
 --- !u!1 &917773729414684241 stripped
 GameObject:
@@ -299,6 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd836bc9914ab9a41b070052579d860b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerControlStartPlane: {fileID: 0}
+  SceneResetTimerInSeconds: 3
 --- !u!1 &6827433148821232645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7408001230718444103, guid: d948b9f1f8138404896874e388dbf463, type: 3}
