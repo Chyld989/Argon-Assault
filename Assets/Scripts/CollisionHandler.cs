@@ -13,8 +13,12 @@ public class CollisionHandler : MonoBehaviour {
 
 	private void Start() {
 		PlayerControls = GetComponent<PlayerControls>();
-		PlayerControlStartPlane.GetComponent<MeshRenderer>().enabled = false; ;
-		PlayerControls.AdjustPlayerControl(false);
+		if (PlayerControlStartPlane != default) {
+			PlayerControlStartPlane.GetComponent<MeshRenderer>().enabled = false; ;
+			PlayerControls.AdjustPlayerControl(false);
+		} else {
+			PlayerControls.AdjustPlayerControl(true);
+		}
 	}
 
 	private void OnTriggerEnter(Collider other) {
@@ -28,6 +32,8 @@ public class CollisionHandler : MonoBehaviour {
 
 	public void StartCrashSequence() {
 		PlayerControls.AdjustPlayerControl(false);
+		PlayerControls.TriggerDeathExplosion();
+		PlayerControls.EnableGravity();
 		StartCoroutine(ReloadSceneAfterDelay(SceneResetTimerInSeconds));
 	}
 

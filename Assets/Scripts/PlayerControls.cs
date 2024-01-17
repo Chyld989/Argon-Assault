@@ -23,19 +23,55 @@ public class PlayerControls : MonoBehaviour {
 	[Tooltip("Add All Machine Gun Objects To Fire")]
 	[SerializeField] List<GameObject> MachineGuns = new List<GameObject>(2);
 
+	[Header("Damage Effects")]
+	[SerializeField] ParticleSystem DeathExplosion;
+	[SerializeField] ParticleSystem DamageSmoke;
+	[SerializeField] [Tooltip("Last element value should be when player is crashed")] int[] DamageSmokeSizePerStage = { 1, 8, 15, 25 };
+	[SerializeField] int DamageSmokeSizeSecondValue = 3;
+	ParticleSystem.MainModule DamageSmokeMain;
+
+	[Header("Testing Values")]
+	[SerializeField] int PlayerMaxHealth = 100;
+	[SerializeField] float PlayerHealth = 100f;
+	[SerializeField] bool TakeDeltaDamage = false;
+	[SerializeField] int DeltaDamageMultiplier = 1;
+
 	float XThrow = 0f;
 	float YThrow = 0f;
 
 	bool PlayerHasControl = false;
+	bool IsCrashed = false;
+
+	private void Start() {
+	}
 
 	// Update is called once per frame
 	void Update() {
+		if (TakeDeltaDamage) {
+			TakeDamage(Time.deltaTime * DeltaDamageMultiplier);
+		}
+		ShowDamage();
 		if (PlayerHasControl) {
 			ProcessPlayerTranslation();
 			ProcessPlayerRotation();
 			ProcessFiring();
 		} else {
 			SetMachineGunsActive(false);
+		}
+	}
+
+	private void ShowDamage() {
+		DamageSmokeMain = DamageSmoke.main;
+		int damageSmokeStages = DamageSmokeSizePerStage.Length;
+		float damageSmokeStageSize = (float)PlayerMaxHealth / damageSmokeStages;
+		DamageSmoke.Stop();
+		for (int i = damageSmokeStages - 1; i >= 0; i--) {
+			if (PlayerHealth <= (damageSmokeStageSize * i) && PlayerHealth > (damageSmokeStageSize * (i-1))) {
+				if (DamageSmoke.isEmitting == false) {
+					DamageSmoke.Play();
+				}
+				DamageSmokeMain.startSize = new ParticleSystem.MinMaxCurve(Mathf.Min(DamageSmokeSizePerStage[damageSmokeStages - i - 1], DamageSmokeSizeSecondValue), Mathf.Max(DamageSmokeSizePerStage[damageSmokeStages - i - 1], DamageSmokeSizeSecondValue));
+			}
 		}
 	}
 
@@ -94,5 +130,24 @@ public class PlayerControls : MonoBehaviour {
 			var emissionModule = machineGun.GetComponent<ParticleSystem>().emission;
 			emissionModule.enabled = machineGunActive;
 		}
+	}
+
+	public void TakeDamage(float damage) {
+		PlayerHealth -= damage;
+		if (PlayerHealth <= 0) {
+			var collisionHandler = this.GetComponent<CollisionHandler>();
+			collisionHandler.StartCrashSequence();
+		}
+	}
+
+	public void TriggerDeathExplosion() {
+		if (IsCrashed == false) {
+			IsCrashed = true;
+			DeathExplosion.Play();
+		}
+	}
+
+	public void EnableGravity() {
+		GetComponent<Rigidbody>().useGravity = true;
 	}
 }
