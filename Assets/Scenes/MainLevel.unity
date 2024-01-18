@@ -516,6 +516,50 @@ Transform:
   m_Father: {fileID: 1368961208}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &199357465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199357467}
+  - component: {fileID: 199357466}
+  m_Layer: 0
+  m_Name: Scoreboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &199357466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199357465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc70fbbb014e878468e2abe300f598d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &199357467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199357465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521267557
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   SpawnAtRuntimeParent: {fileID: 997248757}
+  ScoreValue: 10
 --- !u!136 &840579467
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -795,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874243678
 Transform:
   m_ObjectHideFlags: 0
@@ -888,6 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   SpawnAtRuntimeParent: {fileID: 997248757}
+  ScoreValue: 25
 --- !u!1 &892359582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,6 +1929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   SpawnAtRuntimeParent: {fileID: 997248757}
+  ScoreValue: 10
 --- !u!1 &1785916304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,6 +2096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   SpawnAtRuntimeParent: {fileID: 997248757}
+  ScoreValue: 10
 --- !u!136 &1941726630
 CapsuleCollider:
   m_ObjectHideFlags: 0
