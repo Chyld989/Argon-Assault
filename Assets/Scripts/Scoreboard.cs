@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Scoreboard : MonoBehaviour {
-	int playerScore;
+	int PlayerScore;
+	TMP_Text PlayerScoreOnScoreboard;
 
 	private void Start() {
-		Debug.Log($@"Player score is now {playerScore}");
+		PlayerScoreOnScoreboard = GetComponent<TMP_Text>();
+		PlayerScoreOnScoreboard.text = $@"Score: {PlayerScore}";
 	}
 
 	public void UpdateScore(int scoreModifier) {
-		playerScore += scoreModifier;
-		Debug.Log($@"Player score is now: {playerScore}");
+		PlayerScore += scoreModifier;
+		PlayerScoreOnScoreboard.text = $@"Score: {PlayerScore}";
 	}
 }
