@@ -14457,9 +14457,9 @@ GameObject:
   - component: {fileID: 4000011428506136}
   - component: {fileID: 198000012942003240}
   - component: {fileID: 199000010939959374}
-  - component: {fileID: 5156907089999376864}
+  - component: {fileID: -8794399088747660298}
   m_Layer: 0
-  m_Name: Player Missile SmallExplosionEffect
+  m_Name: Player MachineGun SmallExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14474,7 +14474,7 @@ Transform:
   m_GameObject: {fileID: 1000013462590818}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4000014291108156}
@@ -19171,7 +19171,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5156907089999376864
+--- !u!114 &-8794399088747660298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19183,4 +19183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58750c556d221324a89534e77ce3bd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecondsBeforeDestroy: 5
+  SecondsBeforeDestroy: 2

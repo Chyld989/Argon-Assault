@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: Turn off smoke effect's light unless helicopter is currently damaged (not sure if this script or not)
+
 public class PlayerControls : MonoBehaviour {
 	[Header("General Setup Settings")]
 	[Tooltip("How fast ship moves based upon player input")] [SerializeField] float PlayerSpeed = 10f;
@@ -33,8 +35,8 @@ public class PlayerControls : MonoBehaviour {
 	[Header("Testing Values")]
 	[SerializeField] int PlayerMaxHealth = 100;
 	[SerializeField] float PlayerHealth = 100f;
-	[SerializeField] bool TakeDeltaDamage = false;
-	[SerializeField] int DeltaDamageMultiplier = 1;
+	[SerializeField] [Tooltip("Set to true to have player take constant damage for testing purposes")] bool TakeDeltaDamage = false;
+	[SerializeField] [Tooltip("At 1 player will take 0.0167 damage per second (at 60fps), use this to increase or decrease damage taken")] int DeltaDamageMultiplier = 1;
 
 	float XThrow = 0f;
 	float YThrow = 0f;
