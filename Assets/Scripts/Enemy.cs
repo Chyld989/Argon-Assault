@@ -7,13 +7,14 @@ public class Enemy : MonoBehaviour {
 	[SerializeField] GameObject DeathExplosion;
 	[SerializeField] GameObject MachineGunExplosion;
 	[SerializeField] GameObject RocketExplosion;
-	[SerializeField] Transform SpawnAtRuntimeParent;
 	[SerializeField] int ScoreValue = 10;
 	[SerializeField] int EnemyHealth = 3;
 	Scoreboard Scoreboard;
+	GameObject SpawnAtRuntimeParent;
 
 	private void Start() {
 		Scoreboard = FindObjectOfType<Scoreboard>();
+		SpawnAtRuntimeParent = GameObject.FindWithTag("Spawn At Runtime");
 		var rigidbody = gameObject.AddComponent<Rigidbody>();
 		rigidbody.useGravity = false;
 	}
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour {
 			}
 			// Instantiate the explosion
 			var machineGunExplosion = Instantiate(MachineGunExplosion, hitLocation, Quaternion.identity);
-			machineGunExplosion.transform.parent = SpawnAtRuntimeParent;
+			machineGunExplosion.transform.parent = SpawnAtRuntimeParent.transform;
 		}
 	}
 
@@ -62,6 +63,6 @@ public class Enemy : MonoBehaviour {
 
 	private void GenerateDeathExplosionParticleEffect() {
 		var deathExplosion = Instantiate(DeathExplosion, this.transform.position, Quaternion.identity);
-		deathExplosion.transform.parent = SpawnAtRuntimeParent;
+		deathExplosion.transform.parent = SpawnAtRuntimeParent.transform;
 	}
 }

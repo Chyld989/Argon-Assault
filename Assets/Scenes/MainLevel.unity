@@ -677,7 +677,6 @@ MonoBehaviour:
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   MachineGunExplosion: {fileID: 1000013462590818, guid: b0b4a3ebfd1588a4b9f07d75c77ef6a6, type: 3}
   RocketExplosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  SpawnAtRuntimeParent: {fileID: 997248757}
   ScoreValue: 10
   EnemyHealth: 10
 --- !u!136 &840579467
@@ -872,7 +871,6 @@ MonoBehaviour:
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   MachineGunExplosion: {fileID: 1000013462590818, guid: b0b4a3ebfd1588a4b9f07d75c77ef6a6, type: 3}
   RocketExplosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  SpawnAtRuntimeParent: {fileID: 997248757}
   ScoreValue: 25
   EnemyHealth: 3
 --- !u!1 &892359582
@@ -1166,11 +1164,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &997248757 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 312291036081297893, guid: 2ae112b7523b7fa4f8caeb8d7fba59eb, type: 3}
-  m_PrefabInstance: {fileID: 312291035463735056}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1193382426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1838,6 @@ MonoBehaviour:
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   MachineGunExplosion: {fileID: 1000013462590818, guid: b0b4a3ebfd1588a4b9f07d75c77ef6a6, type: 3}
   RocketExplosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  SpawnAtRuntimeParent: {fileID: 997248757}
   ScoreValue: 10
   EnemyHealth: 10
 --- !u!1 &1785916304
@@ -2015,7 +2007,6 @@ MonoBehaviour:
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
   MachineGunExplosion: {fileID: 1000013462590818, guid: b0b4a3ebfd1588a4b9f07d75c77ef6a6, type: 3}
   RocketExplosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  SpawnAtRuntimeParent: {fileID: 997248757}
   ScoreValue: 10
   EnemyHealth: 10
 --- !u!136 &1941726630
@@ -2106,6 +2097,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312291036081297892, guid: 2ae112b7523b7fa4f8caeb8d7fba59eb, type: 3}
       propertyPath: m_Name
+      value: Spawn At Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 312291036081297892, guid: 2ae112b7523b7fa4f8caeb8d7fba59eb, type: 3}
+      propertyPath: m_TagString
       value: Spawn At Runtime
       objectReference: {fileID: 0}
     - target: {fileID: 312291036081297893, guid: 2ae112b7523b7fa4f8caeb8d7fba59eb, type: 3}
