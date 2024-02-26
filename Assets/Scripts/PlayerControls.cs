@@ -54,6 +54,7 @@ public class PlayerControls : MonoBehaviour {
 		}
 		ShowDamage();
 		if (PlayerHasControl) {
+			ProcessCheats();
 			ProcessPlayerTranslation();
 			ProcessPlayerRotation();
 			ProcessFiring();
@@ -68,7 +69,7 @@ public class PlayerControls : MonoBehaviour {
 		float damageSmokeStageSize = (float)PlayerMaxHealth / damageSmokeStages;
 		DamageSmoke.Stop();
 		for (int i = damageSmokeStages - 1; i >= 0; i--) {
-			if (PlayerHealth <= (damageSmokeStageSize * i) && PlayerHealth > (damageSmokeStageSize * (i-1))) {
+			if (PlayerHealth <= (damageSmokeStageSize * i) && PlayerHealth > (damageSmokeStageSize * (i - 1))) {
 				if (DamageSmoke.isEmitting == false) {
 					DamageSmoke.Play();
 				}
@@ -131,6 +132,12 @@ public class PlayerControls : MonoBehaviour {
 		foreach (var machineGun in MachineGuns) {
 			var emissionModule = machineGun.GetComponent<ParticleSystem>().emission;
 			emissionModule.enabled = machineGunActive;
+		}
+	}
+
+	private void ProcessCheats() {
+		if (Input.GetKeyDown(KeyCode.Alpha0)) {
+			TakeDamage(PlayerMaxHealth);
 		}
 	}
 
