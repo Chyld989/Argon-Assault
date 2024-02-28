@@ -37,6 +37,7 @@ public class PlayerControls : MonoBehaviour {
 	[SerializeField] float PlayerHealth = 100f;
 	[SerializeField] [Tooltip("Set to true to have player take constant damage for testing purposes")] bool TakeDeltaDamage = false;
 	[SerializeField] [Tooltip("At 1 player will take 0.0167 damage per second (at 60fps), use this to increase or decrease damage taken")] int DeltaDamageMultiplier = 1;
+	[SerializeField] [Tooltip("Allow players to toggle cheats on and off with the ~ key")] bool AllowCheats = true;
 
 	float XThrow = 0f;
 	float YThrow = 0f;
@@ -136,8 +137,13 @@ public class PlayerControls : MonoBehaviour {
 	}
 
 	private void ProcessCheats() {
-		if (Input.GetKeyDown(KeyCode.Alpha0)) {
-			TakeDamage(PlayerMaxHealth);
+		if (Input.GetKeyDown(KeyCode.Tilde)) {
+			AllowCheats = !AllowCheats;
+		}
+		if (AllowCheats) {
+			if (Input.GetKeyDown(KeyCode.Alpha0)) {
+				TakeDamage(PlayerMaxHealth);
+			}
 		}
 	}
 
