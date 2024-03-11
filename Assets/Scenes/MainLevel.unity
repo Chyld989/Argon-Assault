@@ -697,11 +697,14 @@ PlayableDirector:
     - e2bfdcd50ec4d464d898199463caf195: {fileID: 1774537690}
     - 278628b87ad046e41b47aebd98eb4875: {fileID: 0}
     - 95c74dad6cd2ed94081b9df72d54f093: {fileID: 0}
+    - cf555b83b59b1d34f8b8277367420225: {fileID: 1926262932}
     - 39c0de850f10e4a43967b35f16c11792: {fileID: 1774537690}
     - d63f72b1c1f8346449d321014dd08d1b: {fileID: 864226838}
     - 8c7f79bff8926e34b91cd6a43f6d7ecd: {fileID: 1521450508}
     - 4bac2f2d345958a4babe008f597db5dc: {fileID: 1774537690}
     - 7c09ac4a26e07ee47b2736a2992715a4: {fileID: 1768714683}
+    - 68cb29c5510552046b3f413b757de7e5: {fileID: 1926262932}
+    - 9165696a92584b048bfb18d945f008cd: {fileID: 1926262932}
 --- !u!1 &561443873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4511237417914522365, guid: 98b00eed9b28b0242a9483049375f130, type: 3}
@@ -1725,6 +1728,11 @@ Transform:
   m_Father: {fileID: 1368961208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1926262932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3196710800707897275, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
+  m_PrefabInstance: {fileID: 6378934057705784558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &312291035463735056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2090,6 +2098,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1074969843927647465, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 363.802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1074969843927647465, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 37.817
+      objectReference: {fileID: 0}
+    - target: {fileID: 1074969843927647465, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -288.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1074969843927647465, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -98.822
+      objectReference: {fileID: 0}
     - target: {fileID: 6378934056514733824, guid: 8806d857de484db4ca73b3cd2b2e836c, type: 3}
       propertyPath: m_Name
       value: Canvas
