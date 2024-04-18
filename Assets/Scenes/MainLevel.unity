@@ -1109,7 +1109,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a29dc5e705e2f4a429ca2000cb221c43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2184,6 +2184,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785916305}
     m_Modifications:
+    - target: {fileID: 964162451541275454, guid: cfebceeef27a55145a92005e7da34cb8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829210183833605971, guid: cfebceeef27a55145a92005e7da34cb8, type: 3}
+      propertyPath: AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 937a9cdb5a4f82946aba6e032732fcda, type: 3}
     - target: {fileID: 6396914723761367908, guid: cfebceeef27a55145a92005e7da34cb8, type: 3}
       propertyPath: m_Name
       value: Wave 10

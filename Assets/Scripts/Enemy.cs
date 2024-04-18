@@ -56,12 +56,12 @@ public class Enemy : MonoBehaviour {
 	}
 
 	private void KillEnemy() {
-		GenerateDeathExplosionParticleEffect();
+		GenerateDeathExplosionEffects();
 		Destroy(this.gameObject);
 		Scoreboard.UpdateScore(ScoreValue);
 	}
 
-	private void GenerateDeathExplosionParticleEffect() {
+	private void GenerateDeathExplosionEffects() {
 		var deathExplosion = Instantiate(DeathExplosion, this.transform.position, Quaternion.identity);
 		deathExplosion.transform.parent = SpawnAtRuntimeParent.transform;
 	}

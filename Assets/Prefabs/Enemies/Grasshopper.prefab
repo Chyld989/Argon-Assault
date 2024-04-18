@@ -75,9 +75,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathExplosion: {fileID: 1000011797152326, guid: 95262cb50e02bd34a8e6696bb2ca6445, type: 3}
+  DeathExplosionSfx: {fileID: 0}
   MachineGunExplosion: {fileID: 1000013462590818, guid: b0b4a3ebfd1588a4b9f07d75c77ef6a6, type: 3}
   RocketExplosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  SpawnAtRuntimeParent: {fileID: 0}
   ScoreValue: 10
   EnemyHealth: 3
 --- !u!1001 &3916440639862677399
